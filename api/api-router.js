@@ -11,7 +11,7 @@ router.get("/", (req, res) => {
 });
 
 router.get('/tell-all', (req,res) => {
-  res.json({ secret: process.env.SECRET_THING })
+  res.status(200).json({ secret: process.env.SECRET_THINGS })
 })
 
 router.get("/shouts", (req, res, next) => {
